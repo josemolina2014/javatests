@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57a8dc15-3126-43c8-8ea4-ed1d32999dbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/platzi/javatests/payments/PaymentProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/platzi/javatests/payments/PaymentProcessorTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,11 +62,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PaymentProcessorTest.paymentIsWrong">
+  <component name="RunManager" selected="JUnit.PaymentProcessorTest">
     <configuration name="All in javatests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="javatests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javatests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.platzi.javatests.payments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.platzi.javatests.payments" />
+      <option name="MAIN_CLASS_NAME" value="com.platzi.javatests.payments.PaymentProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,29 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.loosesWhenDiceNumberIsTooLow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="javatests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.platzi.javatests.player.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.platzi.javatests.player" />
-      <option name="MAIN_CLASS_NAME" value="com.platzi.javatests.player.PlayerTest" />
-      <option name="METHOD_NAME" value="loosesWhenDiceNumberIsTooLow" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PaymentProcessorTest.paymentIsWrong" />
+        <item itemvalue="JUnit.PaymentProcessorTest" />
         <item itemvalue="JUnit.PaymentProcessorTest.paymentIsCorrect" />
+        <item itemvalue="JUnit.PaymentProcessorTest.paymentIsWrong" />
         <item itemvalue="JUnit.All in javatests" />
         <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.PlayerTest.loosesWhenDiceNumberIsTooLow" />
       </list>
     </recent_temporary>
   </component>
