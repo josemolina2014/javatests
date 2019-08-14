@@ -13,6 +13,19 @@ public class StringUtil {
         }
         return result;
     }
+
+    public static boolean isEmpty(String str)
+    {
+//        if(str==null)
+//            return false;
+//
+//        if(str.trim().isEmpty())
+//            return true;
+//        else
+//            return false;
+
+        return str==null || (str.trim().isEmpty());
+    }
 }
 
 
