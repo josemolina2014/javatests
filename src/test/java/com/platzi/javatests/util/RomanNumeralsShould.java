@@ -59,19 +59,4 @@ public class RomanNumeralsShould {
         assertThat(RomanNumerals.arabicToRomanRecursive(3999),  is( "MMMCMXCIX"));
     }
 
-//    @Test
-//    public void arabicToRomanFor() {
-////        assertEquals("", RomanNumerals.arabicToRomanFor(4000));
-////        assertEquals("", RomanNumerals.arabicToRomanFor(3));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(1));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(10));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(5));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(9));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(15));
-//        assertEquals("", RomanNumerals.arabicToRomanRecursive(900));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(125));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(1000));
-////        assertEquals("", RomanNumerals.arabicToRomanRecursive(1123));
-//
-//    }
 }

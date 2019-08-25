@@ -10,7 +10,7 @@ public class FizzBuzz {
             Si el número es divisible por 3 y por 5, retorna “FizzBuzz”
             En otro caso, retorna el mismo número
          */
-        String toReturnValue = "";
+        String toReturnValue;
 
         if(((n % 3) == 0) && ((n % 5) == 0))  toReturnValue="FizzBuzz";
         else if(n % 3 == 0 ) toReturnValue = "Fizz";
