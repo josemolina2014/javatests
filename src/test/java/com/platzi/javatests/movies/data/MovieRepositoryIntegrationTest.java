@@ -22,7 +22,7 @@ public class MovieRepositoryIntegrationTest {
     @Test
     public void load_all_movies() throws SQLException {
 
-        DataSource dataSource = new DriverManagerDataSource("jdbc:h2:men:test;MODE=MYSQL", "sa", "sa");
+        DataSource dataSource = new DriverManagerDataSource("jdbc:h2:mem:test;MODE=MYSQL", "sa", "sa");
 
         ScriptUtils.executeSqlScript(dataSource.getConnection(), new ClassPathResource("sql-scripts/test-data.sql"));
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
