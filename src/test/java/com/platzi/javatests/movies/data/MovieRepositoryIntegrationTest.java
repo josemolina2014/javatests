@@ -39,9 +39,11 @@ public class MovieRepositoryIntegrationTest {
         Collection<Movie> movies = movieRepository.findAll();
 
         assertThat(movies, is(Arrays.asList(
-                new Movie(1,"Dark Knight", 152, Genre.ACTION),
-                new Movie(2,"Memento", 113, Genre.THRILLER),
-                new Movie(3, "Matrix", 136, Genre.ACTION)
+                new Movie(1,"Dark Knight", 152, Genre.ACTION, "Director 3"),
+                new Movie(2,"Memento", 113, Genre.THRILLER, "Director 1"),
+                new Movie(3, "Matrix", 136, Genre.ACTION, "Director 1"),
+                new Movie(4, "Super 8", 136, Genre.ACTION, "Director 1"),
+                new Movie(5, "Superman", 136, Genre.ACTION, "Director 3")
         )));
 
     }
@@ -51,16 +53,35 @@ public class MovieRepositoryIntegrationTest {
 
         Movie movie = movieRepository.findById(2);
 
-        assertThat(movie, is(new Movie(2,"Memento", 113, Genre.THRILLER)));
+        assertThat(movie, is(new Movie(2,"Memento", 113, Genre.THRILLER,"Director 1")));
     }
 
     @Test
-    public void insert_a_moview() {
-        Movie movie = new Movie("Super 8", 112, Genre.THRILLER);
+    public void insert_a_movie() {
+        Movie movie = new Movie("Super 8", 112, Genre.THRILLER, "Director 1");
         movieRepository.saveOrUpdate(movie);
-        Movie movieFromDB = movieRepository.findById(4);
+        Movie movieFromDB = movieRepository.findById(6);
 
-        assertThat(movieFromDB, is(new Movie(4,"Super 8", 112, Genre.THRILLER)));
+        assertThat(movieFromDB, is(new Movie(6,"Super 8", 112, Genre.THRILLER, "Director 1")));
+    }
+
+    @Test
+    public void load_movie_by_name() {
+        Collection<Movie> movies = movieRepository.findByName("super");
+        assertThat(movies, is( Arrays.asList(
+                new Movie(4,"Super 8", 136, Genre.ACTION, "Director 1"),
+                new Movie(5,"Superman", 136, Genre.ACTION, "Director 3"))
+        ));
+    }
+
+    @Test
+    public void load_by_director() {
+        Collection<Movie> movies = movieRepository.findByDirector("Director 3");
+        assertThat(movies, is( Arrays.asList(
+                new Movie(1,"Dark Knight", 152, Genre.ACTION, "Director 3"),
+                new Movie(5,"Superman", 136, Genre.ACTION, "Director 3"))
+        ));
+
     }
 
     @After
