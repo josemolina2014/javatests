@@ -35,21 +35,21 @@ public class Movie {
         this.director = director;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Movie movie = (Movie) o;
-        return minutes == movie.minutes &&
-                Objects.equals(id, movie.id) &&
+        return Objects.equals(id, movie.id) &&
                 Objects.equals(name, movie.name) &&
-                genre == movie.genre;
+                Objects.equals(minutes, movie.minutes) &&
+                genre == movie.genre &&
+                Objects.equals(director, movie.director);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, minutes, genre);
+        return Objects.hash(id, name, minutes, genre, director);
     }
 
     public Integer getId() {
