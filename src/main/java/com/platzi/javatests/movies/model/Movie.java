@@ -5,35 +5,36 @@ import java.util.Objects;
 public class Movie {
     private Integer id;
     private String name;
-    private int minutes;
+    private Integer minutes;
     private Genre genre;
     private String director;
 
-    public Movie(String name, int minutes, Genre genre) {
+    public Movie(String name, Integer minutes, Genre genre) {
         this(null,name,minutes,genre);
     }
 
-    public Movie(String name, int minutes, Genre genre, String director) {
+    public Movie(String name, Integer minutes, Genre genre, String director) {
         this.name = name;
         this.minutes = minutes;
         this.genre = genre;
         this.director = director;
     }
 
-    public Movie(Integer id, String name, int minutes, Genre genre) {
+    public Movie(Integer id, String name, Integer minutes, Genre genre) {
         this.id = id;
         this.name = name;
         this.minutes = minutes;
         this.genre = genre;
     }
 
-    public Movie(Integer id, String name, int minutes, Genre genre, String director) {
+    public Movie(Integer id, String name, Integer minutes, Genre genre, String director) {
         this.id = id;
         this.name = name;
         this.minutes = minutes;
         this.genre = genre;
         this.director = director;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -67,11 +68,11 @@ public class Movie {
         this.name = name;
     }
 
-    public int getMinutes() {
+    public Integer getMinutes() {
         return minutes;
     }
 
-    public void setMinutes(int minutes) {
+    public void setMinutes(Integer minutes) {
         this.minutes = minutes;
     }
 
